@@ -1,0 +1,16 @@
+Рефакторинг и\или оптимизация проекта предыдущего дз с учетом теоретических основ SOLID’а
+
+Что было сделано:
+1. В папки Console созданы папки ConsoleInterface и ConsoleMethod
+В ConsoleInterface созданы интерфейсы InterMenuRN, InterPrint, InterPrintArray, InterPrintln, InterShow,
+InterShowRN, InterValueDou, InterValueInt, InterValueRN, InterValueStr.
+В папке ConsoleMethod перемещены методы InputRN,OutputRN
+Сделан implements выше перечисленных интерфейсов.
+
+2. В папку Model добавлены папки ModelInterface и ModelMethod.
+В ModelInterface добавлены интерфейсы InterDiv, InterMult, InterSub, InterSum.
+В ModelMethod добавлены методы MetDiv, MetMult, MetSub, MetSum. Сделан implements своих интерфейсов.
+Так-же сделана перезагрузка методов MetDiv, MetMult, MetSub, выбран родительский метод MetSum.
+В связи с созданием отделенных методов переделал метод RN_Calc.
+
+3. Из-за сделанных изменений в RN_Calc переделал Presenter.
